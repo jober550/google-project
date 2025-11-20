@@ -200,7 +200,7 @@ export const LivePreview: React.FC<LivePreviewProps> = ({ creation, isLoading, i
         </div>
 
         {/* Right: Actions */}
-        <div className="flex items-center justify-end space-x-1 w-40">
+        <div className="flex items-center justify-end space-x-2 w-auto">
             {!isLoading && creation && (
                 <>
                     {creation.originalImage && (
@@ -213,20 +213,23 @@ export const LivePreview: React.FC<LivePreviewProps> = ({ creation, isLoading, i
                         </button>
                     )}
 
-                    <button 
-                        onClick={handleDownloadHtml}
-                        title="Download Standalone HTML (Run Offline)"
-                        className="text-zinc-500 hover:text-blue-400 transition-colors p-1.5 rounded-md hover:bg-zinc-800"
-                    >
-                        <CommandLineIcon className="w-4 h-4" />
-                    </button>
+                    <div className="h-4 w-px bg-zinc-800 mx-1"></div>
 
                     <button 
                         onClick={handleExportJson}
                         title="Export Artifact (JSON)"
                         className="text-zinc-500 hover:text-zinc-300 transition-colors p-1.5 rounded-md hover:bg-zinc-800"
                     >
-                        <ArrowDownTrayIcon className="w-4 h-4" />
+                        <CodeBracketIcon className="w-4 h-4" />
+                    </button>
+
+                    <button 
+                        onClick={handleDownloadHtml}
+                        className="flex items-center space-x-1.5 px-3 py-1.5 bg-zinc-800 hover:bg-blue-600 text-zinc-300 hover:text-white rounded-md transition-colors text-xs font-medium border border-zinc-700"
+                        title="Download Standalone HTML (Run Offline)"
+                    >
+                        <ArrowDownTrayIcon className="w-3.5 h-3.5" />
+                        <span>Download HTML</span>
                     </button>
 
                     <button 
