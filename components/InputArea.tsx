@@ -93,7 +93,7 @@ export const InputArea: React.FC<InputAreaProps> = ({ onGenerate, isGenerating, 
   };
 
   const setExamplePrompt = () => {
-      setPrompt("Build a Space Tower Defense game in Python style (Object Oriented). Since this is a browser, adapt it to HTML5 Canvas. Include: 1. A grid system for placing turrets. 2. Waves of alien enemies. 3. Neon graphics and particle effects. 4. A Start Screen and Game Over screen. 5. Upgrade system for towers.");
+      setPrompt("Create a Space Tower Defense game. Use 'Python-style' Object Oriented Programming (Classes for Tower, Enemy, Projectile, GameState) but adapted for JavaScript. Features: 1. Neon vector graphics on a dark space background. 2. Enemies follow a defined path (waypoints). 3. Click to place towers (cost money). 4. Particle effects for explosions. 5. Wave system. 6. Playable immediately.");
   };
 
   return (
